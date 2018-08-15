@@ -59,7 +59,7 @@ class PascalVocGenerator(Generator):
         data_dir,
         set_name,
         classes=voc_classes,
-        image_extension='.jpg',
+        image_extension='.png',
         skip_truncated=False,
         skip_difficult=False,
         **kwargs
@@ -107,14 +107,14 @@ class PascalVocGenerator(Generator):
     def image_aspect_ratio(self, image_index):
         """ Compute the aspect ratio for an image with image_index.
         """
-        path  = os.path.join(self.data_dir, 'JPEGImages', self.image_names[image_index] + self.image_extension)
+        path  = os.path.join(self.data_dir, 'Images', self.image_names[image_index] + self.image_extension)
         image = Image.open(path)
         return float(image.width) / float(image.height)
 
     def load_image(self, image_index):
         """ Load an image at the image_index.
         """
-        path = os.path.join(self.data_dir, 'JPEGImages', self.image_names[image_index] + self.image_extension)
+        path = os.path.join(self.data_dir, 'Images', self.image_names[image_index] + self.image_extension)
         return read_image_bgr(path)
 
     def __parse_annotation(self, element):
