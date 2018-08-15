@@ -28,8 +28,8 @@ except ImportError:
     import xml.etree.ElementTree as ET
 
 voc_classes = {
-    'aeroplane'   : 0,
-    'bicycle'     : 1,
+    'background'   : 0,
+    'scheduled'     : 1,
 }
 
 
