@@ -30,5 +30,5 @@ setuptools.setup(
         ],
     },
     ext_modules    = extensions,
-    setup_requires = ["cython>=0.28"]
+    setup_requires = ["cython>=0.28","keras>=2.2.0"]
 )
