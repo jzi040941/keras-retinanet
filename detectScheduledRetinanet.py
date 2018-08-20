@@ -51,43 +51,47 @@ model = models.load_model(model_path, backbone_name='resnet50')
 # load label to names mapping for visualization purposes
 labels_to_names = {0: 'background', 1: 'scheduled'}
 
-write_path = os.path.join('..','ScheduleDetection','predict','12.png')
-image_path = os.path.join('..','Data_Zoo','Scheduled_Pascal','Images','12.png')
-image = read_image_bgr(image_path)
-#image = read_image_bgr('000000008021.jpg')
+write_path = os.path.join('..','ScheduleDetection','predict')
+image_path = os.path.join('..','Data_Zoo','Scheduled_Pascal','Images')
+	
+	#image = read_image_bgr('000000008021.jpg')
 
-# copy to draw on
-draw = image.copy()
-draw = cv2.cvtColor(draw, cv2.COLOR_BGR2RGB)
+dirs = os.listdir(image_path)
+for imgname in dirs
+	# copy to draw on
+	image = read_image_bgr(os.path.join(image_path,imgname))
+	draw = image.copy()
+	draw = cv2.cvtColor(draw, cv2.COLOR_BGR2RGB)
 
-# preprocess image for network
-image = preprocess_image(image)
-image, scale = resize_image(image)
+	# preprocess image for network
+	image = preprocess_image(image)
+	image, scale = resize_image(image)
 
-# process image
-start = time.time()
-boxes, scores, labels = model.predict_on_batch(np.expand_dims(image, axis=0))
-print("processing time: ", time.time() - start)
+	# process image
+	start = time.time()
+	boxes, scores, labels = model.predict_on_batch(np.expand_dims(image, axis=0))
+	print("processing time: ", time.time() - start)
 
-# correct for image scale
-boxes /= scale
+	# correct for image scale
+	boxes /= scale
 
-# visualize detections
-for box, score, label in zip(boxes[0], scores[0], labels[0]):
-    # scores are sorted so we can break
-    if score < 0.5:
-        break
-        
-    color = label_color(label)
-    
-    b = box.astype(int)
-    draw_box(draw, b, color=color)
-    
-    caption = "{} {:.3f}".format(labels_to_names[label], score)
-    draw_caption(draw, b, caption)
-    
+	# visualize detections
+	for box, score, label in zip(boxes[0], scores[0], labels[0]):
+		# scores are sorted so we can break
+		if score < 0.5:
+			break
 
-cv2.imwrite(write_path, draw, [int(cv2.IMWRITE_PNG_COMPRESSION), 3])
+		color = label_color(label)
+
+		b = box.astype(int)
+		draw_box(draw, b, color=color)
+
+		caption = "{} {:.3f}".format(labels_to_names[label], score)
+		draw_caption(draw, b, caption)
+
+
+	cv2.imwrite(os.path.join(write_path,imgname), draw, [int(cv2.IMWRITE_PNG_COMPRESSION), 3])
+
 '''
 plt.figure(figsize=(15, 15))
 plt.axis('off')
