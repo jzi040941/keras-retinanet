@@ -1,9 +1,9 @@
 # show images inline
-%matplotlib inline
+#%matplotlib inline
 
 # automatically reload modules when they have changed
-%load_ext autoreload
-%autoreload 2
+#%load_ext autoreload
+#%autoreload 2
 
 # import keras
 import keras
@@ -51,7 +51,8 @@ model = models.load_model(model_path, backbone_name='resnet50')
 # load label to names mapping for visualization purposes
 labels_to_names = {0: 'background', 1: 'scheduled'}
 
-image_path = os.path.join('~','Data_Zoo','Scheduled_Pascal','12.png')
+write_path = os.path.join('..','ScheduleDetection','predict','12.png')
+image_path = os.path.join('~','Data_Zoo','Scheduled_Pascal','Images','12.png')
 image = read_image_bgr(image_path)
 #image = read_image_bgr('000000008021.jpg')
 
@@ -85,6 +86,8 @@ for box, score, label in zip(boxes[0], scores[0], labels[0]):
     caption = "{} {:.3f}".format(labels_to_names[label], score)
     draw_caption(draw, b, caption)
     
+
+cv2.imwrite(write_path, draw, [int(cv2.IMWRITE_PNG_COMPRESSION), png_compression])
 plt.figure(figsize=(15, 15))
 plt.axis('off')
 plt.imshow(draw)
