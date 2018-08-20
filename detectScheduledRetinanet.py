@@ -52,7 +52,7 @@ model = models.load_model(model_path, backbone_name='resnet50')
 labels_to_names = {0: 'background', 1: 'scheduled'}
 
 write_path = os.path.join('..','ScheduleDetection','predict','12.png')
-image_path = os.path.join('~','Data_Zoo','Scheduled_Pascal','Images','12.png')
+image_path = os.path.join('..','Data_Zoo','Scheduled_Pascal','Images','12.png')
 image = read_image_bgr(image_path)
 #image = read_image_bgr('000000008021.jpg')
 
