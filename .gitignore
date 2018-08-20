@@ -5,4 +5,5 @@ __pycache__/
 *.zip
 /.pytest_cache
 /.cache
+*.o
 *.manifest
