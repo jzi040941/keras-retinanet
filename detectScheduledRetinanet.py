@@ -1,9 +1,9 @@
 # show images inline
-%matplotlib inline
+#%matplotlib inline
 
 # automatically reload modules when they have changed
-%load_ext autoreload
-%autoreload 2
+#%load_ext autoreload
+#%autoreload 2
 
 # import keras
 import keras
