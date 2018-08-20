@@ -37,7 +37,7 @@ keras.backend.tensorflow_backend.set_session(get_session())
 
 # adjust this to point to your downloaded/trained model
 # models can be downloaded here: https://github.com/fizyr/keras-retinanet/releases
-model_path = os.path.join('..', 'ScheduleDetection', 'snapshots', 'resnet50_pascal_01.h5')
+model_path = os.path.join('..', 'ScheduleDetection', 'snapshots','Inference', 'resnet50_pascal_01.h5')
 
 # load retinanet model
 model = models.load_model(model_path, backbone_name='resnet50')
@@ -87,8 +87,10 @@ for box, score, label in zip(boxes[0], scores[0], labels[0]):
     draw_caption(draw, b, caption)
     
 
-cv2.imwrite(write_path, draw, [int(cv2.IMWRITE_PNG_COMPRESSION), png_compression])
+cv2.imwrite(write_path, draw, [int(cv2.IMWRITE_PNG_COMPRESSION), 3])
+'''
 plt.figure(figsize=(15, 15))
 plt.axis('off')
 plt.imshow(draw)
 plt.show()
+'''
