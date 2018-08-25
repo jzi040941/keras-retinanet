@@ -37,7 +37,7 @@ keras.backend.tensorflow_backend.set_session(get_session())
 
 # adjust this to point to your downloaded/trained model
 # models can be downloaded here: https://github.com/fizyr/keras-retinanet/releases
-model_path = os.path.join('..', 'ScheduleDetection', 'snapshots','Inference', 'resnet50_pascal_01.h5')
+model_path = os.path.join('..', 'ScheduleDetection', 'snapshots','Inference', 'resnet50_pascal_01_nonms.h5')
 
 # load retinanet model
 model = models.load_model(model_path, backbone_name='resnet50')
@@ -51,13 +51,13 @@ model = models.load_model(model_path, backbone_name='resnet50')
 # load label to names mapping for visualization purposes
 labels_to_names = {0: 'background', 1: 'scheduled'}
 
-write_path = os.path.join('..','ScheduleDetection','predict')
-image_path = os.path.join('..','Data_Zoo','Scheduled_Pascal','Images')
+write_path = os.path.join('..','ScheduleDetection','predict','pascal_01_nonms')
+image_path = os.path.join('..','Data_Zoo','Scheduled_Pascal','Images','test')
 	
 	#image = read_image_bgr('000000008021.jpg')
 
 dirs = os.listdir(image_path)
-for imgname in dirs
+for imgname in dirs:
 	# copy to draw on
 	image = read_image_bgr(os.path.join(image_path,imgname))
 	draw = image.copy()
