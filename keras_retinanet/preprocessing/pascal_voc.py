@@ -137,7 +137,9 @@ class PascalVocGenerator(Generator):
 
         box = np.zeros((1, 5))
         box[0, 4] = self.name_to_label(class_name)
-
+		
+		
+		
         bndbox    = _findNode(element, 'bndbox')
         box[0, 0] = _findNode(bndbox, 'xmin', 'bndbox.xmin', parse=float)
         box[0, 1] = _findNode(bndbox, 'ymin', 'bndbox.ymin', parse=float)
