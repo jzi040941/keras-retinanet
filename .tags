@@ -154,7 +154,8 @@ MobileNetBackbone	keras_retinanet/models/mobilenet.py	/^class MobileNetBackbone(
 OpenImagesGenerator	keras_retinanet/preprocessing/open_images.py	/^class OpenImagesGenerator(Generator):$/;"	c	line:213
 PY_LONG_LONG	keras_retinanet/utils/compute_overlap.c	40;"	d	line:40	file:
 PY_SSIZE_T_CLEAN	keras_retinanet/utils/compute_overlap.c	3;"	d	line:3	file:
-PascalVocGenerator	keras_retinanet/preprocessing/pascal_voc.py	/^class PascalVocGenerator(Generator):$/;"	c	line:51
+PascalVocGenerator	keras_retinanet/preprocessing/pascal_voc.py	/^class PascalVocGenerator(Generator):$/;"	c	line:59
+PascalVocGenerator	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^class PascalVocGenerator(Generator):$/;"	c	line:51
 PriorProbability	keras_retinanet/initializers.py	/^class PriorProbability(keras.initializers.Initializer):$/;"	c	line:23
 PyBaseString_Type	keras_retinanet/utils/compute_overlap.c	451;"	d	line:451	file:
 PyBoolObject	keras_retinanet/utils/compute_overlap.c	491;"	d	line:491	file:
@@ -663,7 +664,8 @@ __init__	keras_retinanet/preprocessing/csv_generator.py	/^    def __init__($/;"	
 __init__	keras_retinanet/preprocessing/generator.py	/^    def __init__($/;"	m	line:43	class:Generator
 __init__	keras_retinanet/preprocessing/kitti.py	/^    def __init__($/;"	m	line:45	class:KittiGenerator
 __init__	keras_retinanet/preprocessing/open_images.py	/^    def __init__($/;"	m	line:214	class:OpenImagesGenerator
-__init__	keras_retinanet/preprocessing/pascal_voc.py	/^    def __init__($/;"	m	line:57	class:PascalVocGenerator
+__init__	keras_retinanet/preprocessing/pascal_voc.py	/^    def __init__($/;"	m	line:65	class:PascalVocGenerator
+__init__	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def __init__($/;"	m	line:57	class:PascalVocGenerator
 __init__	keras_retinanet/utils/image.py	/^    def __init__($/;"	m	line:93	class:TransformParameters
 __init__	tests/preprocessing/test_generator.py	/^    def __init__(self, annotations_group, num_classes=0, image=None):$/;"	m	line:24	class:SimpleGenerator
 __next__	keras_retinanet/preprocessing/generator.py	/^    def __next__(self):$/;"	m	line:280	class:Generator	file:
@@ -671,8 +673,10 @@ __package__	keras_retinanet/bin/convert_model.py	/^    __package__ = "keras_reti
 __package__	keras_retinanet/bin/debug.py	/^    __package__ = "keras_retinanet.bin"$/;"	v	line:28
 __package__	keras_retinanet/bin/evaluate.py	/^    __package__ = "keras_retinanet.bin"$/;"	v	line:28
 __package__	keras_retinanet/bin/train.py	/^    __package__ = "keras_retinanet.bin"$/;"	v	line:32
-__parse_annotation	keras_retinanet/preprocessing/pascal_voc.py	/^    def __parse_annotation(self, element):$/;"	m	line:120	class:PascalVocGenerator	file:
-__parse_annotations	keras_retinanet/preprocessing/pascal_voc.py	/^    def __parse_annotations(self, xml_root):$/;"	m	line:141	class:PascalVocGenerator	file:
+__parse_annotation	keras_retinanet/preprocessing/pascal_voc.py	/^    def __parse_annotation(self, element):$/;"	m	line:128	class:PascalVocGenerator	file:
+__parse_annotation	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def __parse_annotation(self, element):$/;"	m	line:120	class:PascalVocGenerator	file:
+__parse_annotations	keras_retinanet/preprocessing/pascal_voc.py	/^    def __parse_annotations(self, xml_root):$/;"	m	line:151	class:PascalVocGenerator	file:
+__parse_annotations	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def __parse_annotations(self, xml_root):$/;"	m	line:141	class:PascalVocGenerator	file:
 __pyx_PyFloat_AsDouble	keras_retinanet/utils/compute_overlap.c	661;"	d	line:661	file:
 __pyx_PyFloat_AsDouble	keras_retinanet/utils/compute_overlap.c	663;"	d	line:663	file:
 __pyx_PyFloat_AsFloat	keras_retinanet/utils/compute_overlap.c	665;"	d	line:665	file:
@@ -851,7 +855,8 @@ _backend	keras_retinanet/backend/dynamic.py	/^    _backend = os.environ["KERAS_B
 _compute_ap	keras_retinanet/utils/eval.py	/^def _compute_ap(recall, precision):$/;"	f	line:29
 _filter_detections	keras_retinanet/layers/filter_detections.py	/^        def _filter_detections(args):$/;"	f	line:158	function:FilterDetections.call
 _filter_detections	keras_retinanet/layers/filter_detections.py	/^    def _filter_detections(scores, labels):$/;"	f	line:51
-_findNode	keras_retinanet/preprocessing/pascal_voc.py	/^def _findNode(parent, name, debug_name=None, parse=None):$/;"	f	line:36
+_findNode	keras_retinanet/preprocessing/pascal_voc.py	/^def _findNode(parent, name, debug_name=None, parse=None):$/;"	f	line:44
+_findNode	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^def _findNode(parent, name, debug_name=None, parse=None):$/;"	f	line:36
 _focal	keras_retinanet/losses.py	/^    def _focal(y_true, y_pred):$/;"	f	line:31	function:focal
 _get_annotations	keras_retinanet/utils/eval.py	/^def _get_annotations(generator):$/;"	f	line:119
 _get_detections	keras_retinanet/utils/eval.py	/^def _get_detections(generator, model, score_threshold=0.05, max_detections=100, save_path=None):$/;"	f	line:58
@@ -895,6 +900,7 @@ author	setup.py	/^    author           = 'Hans Gaiser',$/;"	v	line:18
 author_email	setup.py	/^    author_email     = 'h.gaiser@fizyr.com',$/;"	v	line:19
 average_precision	keras_retinanet/utils/eval.py	/^        average_precision  = _compute_ap(recall, precision)$/;"	v	line:227
 average_precisions	keras_retinanet/utils/eval.py	/^    average_precisions = {}$/;"	v	line:168
+b	SegmentationScheduledRetinanet.py	/^		b = box.astype(int)$/;"	v	line:93
 b	detectScheduledRetinanet.py	/^		b = box.astype(int)$/;"	v	line:86
 backbone	keras_retinanet/models/__init__.py	/^def backbone(backbone_name):$/;"	f	line:45
 backends	keras_retinanet/backend/dynamic.py	/^    backends = {$/;"	v	line:8
@@ -928,6 +934,7 @@ call	keras_retinanet/layers/_misc.py	/^    def call(self, inputs, **kwargs):$/;"
 call	keras_retinanet/layers/_misc.py	/^    def call(self, inputs, **kwargs):$/;"	m	line:169	class:ClipBoxes
 call	keras_retinanet/layers/_misc.py	/^    def call(self, inputs, **kwargs):$/;"	m	line:60	class:Anchors
 call	keras_retinanet/layers/filter_detections.py	/^    def call(self, inputs, **kwargs):$/;"	m	line:147	class:FilterDetections
+caption	SegmentationScheduledRetinanet.py	/^		caption = "{} {:.3f}".format(labels_to_names[label], score)$/;"	v	line:96
 caption	detectScheduledRetinanet.py	/^		caption = "{} {:.3f}".format(labels_to_names[label], score)$/;"	v	line:89
 change_transform_origin	keras_retinanet/utils/transform.py	/^def change_transform_origin(transform, center):$/;"	f	line:189
 check_args	keras_retinanet/bin/train.py	/^def check_args(parsed_args):$/;"	f	line:315
@@ -940,6 +947,7 @@ coco_label_to_label	keras_retinanet/preprocessing/coco.py	/^    def coco_label_t
 coco_label_to_name	keras_retinanet/preprocessing/coco.py	/^    def coco_label_to_name(self, coco_label):$/;"	m	line:94	class:CocoGenerator
 code_line	keras_retinanet/utils/compute_overlap.c	/^    int code_line;$/;"	m	line:1341	struct:__anon9	file:
 code_object	keras_retinanet/utils/compute_overlap.c	/^    PyCodeObject* code_object;$/;"	m	line:1340	struct:__anon9	file:
+color	SegmentationScheduledRetinanet.py	/^		color = label_color(label)$/;"	v	line:91
 color	detectScheduledRetinanet.py	/^		color = label_color(label)$/;"	v	line:84
 colors	keras_retinanet/utils/colors.py	/^colors = [$/;"	v	line:31
 colvec	keras_retinanet/utils/transform.py	/^def colvec(*args):$/;"	f	line:22
@@ -975,12 +983,15 @@ detected_annotations	keras_retinanet/utils/eval.py	/^            detected_annota
 detections	keras_retinanet/models/retinanet.py	/^    detections = layers.FilterDetections($/;"	v	line:362
 detections	keras_retinanet/utils/eval.py	/^            detections           = all_detections[i][label]$/;"	v	line:183
 diminfo	keras_retinanet/utils/compute_overlap.c	/^  __Pyx_Buf_DimInfo diminfo[8];$/;"	m	line:1368	struct:__anon12	file:
+dirs	SegmentationScheduledRetinanet.py	/^dirs = os.listdir(image_path)$/;"	v	line:66
 dirs	detectScheduledRetinanet.py	/^dirs = os.listdir(image_path)$/;"	v	line:59
 download_imagenet	keras_retinanet/models/__init__.py	/^    def download_imagenet(self):$/;"	m	line:28	class:Backbone
 download_imagenet	keras_retinanet/models/densenet.py	/^    def download_imagenet(self):$/;"	m	line:37	class:DenseNetBackbone
 download_imagenet	keras_retinanet/models/mobilenet.py	/^    def download_imagenet(self):$/;"	m	line:45	class:MobileNetBackbone
 download_imagenet	keras_retinanet/models/resnet.py	/^    def download_imagenet(self):$/;"	m	line:40	class:ResNetBackbone
 download_imagenet	keras_retinanet/models/vgg.py	/^    def download_imagenet(self):$/;"	m	line:35	class:VGGBackbone
+draw	SegmentationScheduledRetinanet.py	/^	draw = cv2.cvtColor(draw, cv2.COLOR_BGR2RGB)$/;"	v	line:71
+draw	SegmentationScheduledRetinanet.py	/^	draw = image.copy()$/;"	v	line:70
 draw	detectScheduledRetinanet.py	/^	draw = cv2.cvtColor(draw, cv2.COLOR_BGR2RGB)$/;"	v	line:64
 draw	detectScheduledRetinanet.py	/^	draw = image.copy()$/;"	v	line:63
 draw_annotations	keras_retinanet/utils/visualization.py	/^def draw_annotations(image, annotations, color=(0, 255, 0), label_to_name=None):$/;"	f	line:85
@@ -1026,6 +1037,7 @@ get_config	keras_retinanet/layers/_misc.py	/^    def get_config(self):$/;"	m	lin
 get_config	keras_retinanet/layers/_misc.py	/^    def get_config(self):$/;"	m	line:84	class:Anchors
 get_config	keras_retinanet/layers/filter_detections.py	/^    def get_config(self):$/;"	m	line:207	class:FilterDetections
 get_labels	keras_retinanet/preprocessing/open_images.py	/^def get_labels(metadata_dir, version='v4'):$/;"	f	line:70
+get_session	SegmentationScheduledRetinanet.py	/^def get_session():$/;"	f	line:27
 get_session	detectScheduledRetinanet.py	/^def get_session():$/;"	f	line:27
 get_session	keras_retinanet/bin/evaluate.py	/^def get_session():$/;"	f	line:38
 get_session	keras_retinanet/bin/train.py	/^def get_session():$/;"	f	line:62
@@ -1036,6 +1048,8 @@ head	keras_retinanet/utils/compute_overlap.c	/^  __Pyx_BufFmt_StackElem* head;$/
 ignore_indices	keras_retinanet/utils/anchors.py	/^    ignore_indices = (max_overlaps > negative_overlap) & ~positive_indices$/;"	v	line:118
 imag	keras_retinanet/utils/compute_overlap.c	/^    typedef struct { double real, imag; } __pyx_t_double_complex;$/;"	m	line:1043	struct:__anon7	file:
 imag	keras_retinanet/utils/compute_overlap.c	/^    typedef struct { float real, imag; } __pyx_t_float_complex;$/;"	m	line:1031	struct:__anon6	file:
+image	SegmentationScheduledRetinanet.py	/^	image = preprocess_image(image)$/;"	v	line:74
+image	SegmentationScheduledRetinanet.py	/^	image = read_image_bgr(os.path.join(image_path,imgname))$/;"	v	line:69
 image	detectScheduledRetinanet.py	/^	image = preprocess_image(image)$/;"	v	line:67
 image	detectScheduledRetinanet.py	/^	image = read_image_bgr(os.path.join(image_path,imgname))$/;"	v	line:62
 image_aspect_ratio	keras_retinanet/preprocessing/coco.py	/^    def image_aspect_ratio(self, image_index):$/;"	m	line:104	class:CocoGenerator
@@ -1043,7 +1057,9 @@ image_aspect_ratio	keras_retinanet/preprocessing/csv_generator.py	/^    def imag
 image_aspect_ratio	keras_retinanet/preprocessing/generator.py	/^    def image_aspect_ratio(self, image_index):$/;"	m	line:106	class:Generator
 image_aspect_ratio	keras_retinanet/preprocessing/kitti.py	/^    def image_aspect_ratio(self, image_index):$/;"	m	line:127	class:KittiGenerator
 image_aspect_ratio	keras_retinanet/preprocessing/open_images.py	/^    def image_aspect_ratio(self, image_index):$/;"	m	line:333	class:OpenImagesGenerator
-image_aspect_ratio	keras_retinanet/preprocessing/pascal_voc.py	/^    def image_aspect_ratio(self, image_index):$/;"	m	line:107	class:PascalVocGenerator
+image_aspect_ratio	keras_retinanet/preprocessing/pascal_voc.py	/^    def image_aspect_ratio(self, image_index):$/;"	m	line:115	class:PascalVocGenerator
+image_aspect_ratio	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def image_aspect_ratio(self, image_index):$/;"	m	line:107	class:PascalVocGenerator
+image_path	SegmentationScheduledRetinanet.py	/^image_path = os.path.join('..','Data_Zoo','Daytimetbseg_Pascal','Images')$/;"	v	line:60
 image_path	detectScheduledRetinanet.py	/^image_path = os.path.join('..','Data_Zoo','Scheduled_Pascal','Images','test')$/;"	v	line:55
 image_path	keras_retinanet/preprocessing/csv_generator.py	/^    def image_path(self, image_index):$/;"	m	line:182	class:CSVGenerator
 image_path	keras_retinanet/preprocessing/open_images.py	/^    def image_path(self, image_index):$/;"	m	line:338	class:OpenImagesGenerator
@@ -1074,12 +1090,14 @@ label_to_name	keras_retinanet/preprocessing/csv_generator.py	/^    def label_to_
 label_to_name	keras_retinanet/preprocessing/generator.py	/^    def label_to_name(self, label):$/;"	m	line:101	class:Generator
 label_to_name	keras_retinanet/preprocessing/kitti.py	/^    def label_to_name(self, label):$/;"	m	line:122	class:KittiGenerator
 label_to_name	keras_retinanet/preprocessing/open_images.py	/^    def label_to_name(self, label):$/;"	m	line:330	class:OpenImagesGenerator
-label_to_name	keras_retinanet/preprocessing/pascal_voc.py	/^    def label_to_name(self, label):$/;"	m	line:102	class:PascalVocGenerator
+label_to_name	keras_retinanet/preprocessing/pascal_voc.py	/^    def label_to_name(self, label):$/;"	m	line:110	class:PascalVocGenerator
+label_to_name	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def label_to_name(self, label):$/;"	m	line:102	class:PascalVocGenerator
 labels	keras_retinanet/layers/filter_detections.py	/^    labels              = indices[:, 1]$/;"	v	line:88
 labels	keras_retinanet/layers/filter_detections.py	/^    labels              = keras.backend.gather(labels, top_indices)$/;"	v	line:94
 labels	keras_retinanet/layers/filter_detections.py	/^    labels   = backend.pad(labels, [[0, pad_size]], constant_values=-1)$/;"	v	line:101
 labels	keras_retinanet/layers/filter_detections.py	/^    labels   = keras.backend.cast(labels, 'int32')$/;"	v	line:102
 labels_batch	keras_retinanet/utils/anchors.py	/^    labels_batch      = np.zeros((batch_size, anchors.shape[0], num_classes + 1), dtype=keras.backend.floatx())$/;"	v	line:57
+labels_to_names	SegmentationScheduledRetinanet.py	/^labels_to_names = {$/;"	v	line:52
 labels_to_names	detectScheduledRetinanet.py	/^labels_to_names = {0: 'background', 1: 'scheduled'}$/;"	v	line:52
 layer_shapes	keras_retinanet/utils/anchors.py	/^def layer_shapes(image_shape, model):$/;"	f	line:123
 likely	keras_retinanet/utils/compute_overlap.c	750;"	d	line:750	file:
@@ -1089,7 +1107,8 @@ load_annotations	keras_retinanet/preprocessing/csv_generator.py	/^    def load_a
 load_annotations	keras_retinanet/preprocessing/generator.py	/^    def load_annotations(self, image_index):$/;"	m	line:116	class:Generator
 load_annotations	keras_retinanet/preprocessing/kitti.py	/^    def load_annotations(self, image_index):$/;"	m	line:139	class:KittiGenerator
 load_annotations	keras_retinanet/preprocessing/open_images.py	/^    def load_annotations(self, image_index):$/;"	m	line:345	class:OpenImagesGenerator
-load_annotations	keras_retinanet/preprocessing/pascal_voc.py	/^    def load_annotations(self, image_index):$/;"	m	line:159	class:PascalVocGenerator
+load_annotations	keras_retinanet/preprocessing/pascal_voc.py	/^    def load_annotations(self, image_index):$/;"	m	line:169	class:PascalVocGenerator
+load_annotations	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def load_annotations(self, image_index):$/;"	m	line:159	class:PascalVocGenerator
 load_annotations	tests/preprocessing/test_generator.py	/^    def load_annotations(self, image_index):$/;"	m	line:39	class:SimpleGenerator
 load_annotations_group	keras_retinanet/preprocessing/generator.py	/^    def load_annotations_group(self, group):$/;"	m	line:121	class:Generator
 load_classes	keras_retinanet/preprocessing/coco.py	/^    def load_classes(self):$/;"	m	line:48	class:CocoGenerator
@@ -1100,7 +1119,8 @@ load_image	keras_retinanet/preprocessing/csv_generator.py	/^    def load_image(s
 load_image	keras_retinanet/preprocessing/generator.py	/^    def load_image(self, image_index):$/;"	m	line:111	class:Generator
 load_image	keras_retinanet/preprocessing/kitti.py	/^    def load_image(self, image_index):$/;"	m	line:134	class:KittiGenerator
 load_image	keras_retinanet/preprocessing/open_images.py	/^    def load_image(self, image_index):$/;"	m	line:342	class:OpenImagesGenerator
-load_image	keras_retinanet/preprocessing/pascal_voc.py	/^    def load_image(self, image_index):$/;"	m	line:114	class:PascalVocGenerator
+load_image	keras_retinanet/preprocessing/pascal_voc.py	/^    def load_image(self, image_index):$/;"	m	line:122	class:PascalVocGenerator
+load_image	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def load_image(self, image_index):$/;"	m	line:114	class:PascalVocGenerator
 load_image	tests/preprocessing/test_generator.py	/^    def load_image(self, image_index):$/;"	m	line:33	class:SimpleGenerator
 load_image_group	keras_retinanet/preprocessing/generator.py	/^    def load_image_group(self, group):$/;"	m	line:154	class:Generator
 load_model	keras_retinanet/models/__init__.py	/^def load_model(filepath, backbone_name='resnet50', convert=False, nms=True, class_specific_filter=True):$/;"	f	line:62
@@ -1119,13 +1139,15 @@ max_overlaps	keras_retinanet/utils/anchors.py	/^    max_overlaps = overlaps[np.a
 meshgrid	keras_retinanet/backend/tensorflow_backend.py	/^def meshgrid(*args, **kwargs):$/;"	f	line:89
 minimum_keras_version	keras_retinanet/utils/keras_version.py	/^minimum_keras_version = 2, 2, 0$/;"	v	line:22
 mobilenet_retinanet	keras_retinanet/models/mobilenet.py	/^def mobilenet_retinanet(num_classes, backbone='mobilenet224_1.0', inputs=None, modifier=None, **kwargs):$/;"	f	line:88
+model	SegmentationScheduledRetinanet.py	/^model = models.load_model(model_path, backbone_name='resnet50')$/;"	v	line:43
 model	detectScheduledRetinanet.py	/^model = models.load_model(model_path, backbone_name='resnet50')$/;"	v	line:43
 model	keras_retinanet/models/retinanet.py	/^        model = retinanet(num_anchors=anchor_parameters.num_anchors(), **kwargs)$/;"	v	line:344
+model_path	SegmentationScheduledRetinanet.py	/^model_path = os.path.join('..', 'DaytimetbSegmentation', 'snapshots','Inference', 'resnet50_pascal_03.h5')$/;"	v	line:40
 model_path	detectScheduledRetinanet.py	/^model_path = os.path.join('..', 'ScheduleDetection', 'snapshots','Inference', 'resnet50_pascal_01_nonms.h5')$/;"	v	line:40
 model_with_weights	keras_retinanet/bin/train.py	/^def model_with_weights(model, weights, skip_mismatch):$/;"	f	line:70
 n	keras_retinanet/utils/compute_overlap.c	/^typedef struct {PyObject **p; const char *s; const Py_ssize_t n; const char* encoding;$/;"	m	line:577	struct:__anon2	file:
 name	keras_retinanet/models/retinanet.py	/^            name='pyramid_classification_{}'.format(i),$/;"	v	line:59
-name	keras_retinanet/models/retinanet.py	/^        name                  = 'filtered_detections'$/;"	v	line:365
+name	keras_retinanet/models/retinanet.py	/^        name                  = 'filtered_detections'$/;"	v	line:366
 name	keras_retinanet/models/retinanet.py	/^        name='pyramid_classification',$/;"	v	line:69
 name	keras_retinanet/utils/compute_overlap.c	/^  const char* name;$/;"	m	line:803	struct:__anon3	file:
 name	keras_retinanet/utils/compute_overlap.c	/^  const char* name;$/;"	m	line:814	struct:__Pyx_StructField_	file:
@@ -1135,12 +1157,14 @@ name_to_label	keras_retinanet/preprocessing/csv_generator.py	/^    def name_to_l
 name_to_label	keras_retinanet/preprocessing/generator.py	/^    def name_to_label(self, name):$/;"	m	line:96	class:Generator
 name_to_label	keras_retinanet/preprocessing/kitti.py	/^    def name_to_label(self, name):$/;"	m	line:117	class:KittiGenerator
 name_to_label	keras_retinanet/preprocessing/open_images.py	/^    def name_to_label(self, name):$/;"	m	line:327	class:OpenImagesGenerator
-name_to_label	keras_retinanet/preprocessing/pascal_voc.py	/^    def name_to_label(self, name):$/;"	m	line:97	class:PascalVocGenerator
+name_to_label	keras_retinanet/preprocessing/pascal_voc.py	/^    def name_to_label(self, name):$/;"	m	line:105	class:PascalVocGenerator
+name_to_label	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def name_to_label(self, name):$/;"	m	line:97	class:PascalVocGenerator
 ndim	keras_retinanet/utils/compute_overlap.c	/^  int ndim;$/;"	m	line:807	struct:__anon3	file:
 new_count	keras_retinanet/utils/compute_overlap.c	/^  size_t new_count, enc_count;$/;"	m	line:825	struct:__anon5	file:
 new_packmode	keras_retinanet/utils/compute_overlap.c	/^  char new_packmode;$/;"	m	line:829	struct:__anon5	file:
 next	keras_retinanet/preprocessing/generator.py	/^    def next(self):$/;"	m	line:283	class:Generator
 nms	keras_retinanet/models/retinanet.py	/^        nms                   = nms,$/;"	v	line:363
+nms_threshold	keras_retinanet/models/retinanet.py	/^		nms_threshold         = 0.25,$/;"	v	line:365
 non_max_suppression	keras_retinanet/backend/tensorflow_backend.py	/^def non_max_suppression(*args, **kwargs):$/;"	f	line:65
 num_anchors	keras_retinanet/models/retinanet.py	/^    def num_anchors(self):$/;"	m	line:179	class:AnchorParameters
 num_annotations	keras_retinanet/utils/eval.py	/^        num_annotations = 0.0$/;"	v	line:180
@@ -1149,7 +1173,8 @@ num_classes	keras_retinanet/preprocessing/csv_generator.py	/^    def num_classes
 num_classes	keras_retinanet/preprocessing/generator.py	/^    def num_classes(self):$/;"	m	line:91	class:Generator
 num_classes	keras_retinanet/preprocessing/kitti.py	/^    def num_classes(self):$/;"	m	line:112	class:KittiGenerator
 num_classes	keras_retinanet/preprocessing/open_images.py	/^    def num_classes(self):$/;"	m	line:324	class:OpenImagesGenerator
-num_classes	keras_retinanet/preprocessing/pascal_voc.py	/^    def num_classes(self):$/;"	m	line:92	class:PascalVocGenerator
+num_classes	keras_retinanet/preprocessing/pascal_voc.py	/^    def num_classes(self):$/;"	m	line:100	class:PascalVocGenerator
+num_classes	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def num_classes(self):$/;"	m	line:92	class:PascalVocGenerator
 num_classes	tests/preprocessing/test_generator.py	/^    def num_classes(self):$/;"	m	line:30	class:SimpleGenerator
 offset	keras_retinanet/utils/compute_overlap.c	/^  size_t offset;$/;"	m	line:815	struct:__Pyx_StructField_	file:
 offsetof	keras_retinanet/utils/compute_overlap.c	14;"	d	line:14	file:
@@ -1167,7 +1192,7 @@ other_	keras_retinanet/layers/filter_detections.py	/^    other_              = [
 other_	keras_retinanet/layers/filter_detections.py	/^    other_   = [backend.pad(o, [[0, pad_size]] + [[0, 0] for _ in range(1, len(o.shape))], constant_values=-1) for o in other_]$/;"	v	line:103
 outputs	keras_retinanet/models/retinanet.py	/^        outputs = keras.layers.Conv2D($/;"	v	line:56
 outputs	keras_retinanet/models/retinanet.py	/^        outputs = keras.layers.Permute((2, 3, 1), name='pyramid_classification_permute')(outputs)$/;"	v	line:75
-outputs	keras_retinanet/models/retinanet.py	/^    outputs = detections$/;"	v	line:368
+outputs	keras_retinanet/models/retinanet.py	/^    outputs = detections$/;"	v	line:370
 outputs	keras_retinanet/models/retinanet.py	/^    outputs = inputs$/;"	v	line:54
 outputs	keras_retinanet/models/retinanet.py	/^    outputs = keras.layers.Activation('sigmoid', name='pyramid_classification_sigmoid')(outputs)$/;"	v	line:77
 outputs	keras_retinanet/models/retinanet.py	/^    outputs = keras.layers.Conv2D($/;"	v	line:65
@@ -1253,12 +1278,14 @@ size	keras_retinanet/preprocessing/csv_generator.py	/^    def size(self):$/;"	m	
 size	keras_retinanet/preprocessing/generator.py	/^    def size(self):$/;"	m	line:86	class:Generator
 size	keras_retinanet/preprocessing/kitti.py	/^    def size(self):$/;"	m	line:107	class:KittiGenerator
 size	keras_retinanet/preprocessing/open_images.py	/^    def size(self):$/;"	m	line:321	class:OpenImagesGenerator
-size	keras_retinanet/preprocessing/pascal_voc.py	/^    def size(self):$/;"	m	line:87	class:PascalVocGenerator
+size	keras_retinanet/preprocessing/pascal_voc.py	/^    def size(self):$/;"	m	line:95	class:PascalVocGenerator
+size	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^    def size(self):$/;"	m	line:87	class:PascalVocGenerator
 size	keras_retinanet/utils/compute_overlap.c	/^  size_t size;$/;"	m	line:805	struct:__anon3	file:
 size	tests/preprocessing/test_generator.py	/^    def size(self):$/;"	m	line:36	class:SimpleGenerator
 sizes	keras_retinanet/models/retinanet.py	/^    sizes   = [32, 64, 128, 256, 512],$/;"	v	line:187
 sizes	keras_retinanet/utils/anchors.py	/^        sizes = [2 ** (x + 2) for x in pyramid_levels]$/;"	v	line:202
 smooth_l1	keras_retinanet/losses.py	/^def smooth_l1(sigma=3.0):$/;"	f	line:70
+start	SegmentationScheduledRetinanet.py	/^	start = time.time()$/;"	v	line:78
 start	detectScheduledRetinanet.py	/^	start = time.time()$/;"	v	line:71
 strides	keras_retinanet/models/retinanet.py	/^    strides = [8, 16, 32, 64, 128],$/;"	v	line:188
 strides	keras_retinanet/utils/anchors.py	/^        strides = [2 ** x for x in pyramid_levels]$/;"	v	line:200
@@ -1343,8 +1370,10 @@ validate	keras_retinanet/models/resnet.py	/^    def validate(self):$/;"	m	line:6
 validate	keras_retinanet/models/vgg.py	/^    def validate(self):$/;"	m	line:55	class:VGGBackbone
 version	setup.py	/^    version          = '0.4.1',$/;"	v	line:15
 vgg_retinanet	keras_retinanet/models/vgg.py	/^def vgg_retinanet(num_classes, backbone='vgg16', inputs=None, modifier=None, **kwargs):$/;"	f	line:69
-voc_classes	keras_retinanet/preprocessing/pascal_voc.py	/^voc_classes = {$/;"	v	line:30
+voc_classes	keras_retinanet/preprocessing/pascal_voc.py	/^voc_classes = {$/;"	v	line:36
+voc_classes	keras_retinanet/preprocessing/pascal_voc_daytimetbseg.py	/^voc_classes = {$/;"	v	line:30
 where	keras_retinanet/backend/tensorflow_backend.py	/^def where(*args, **kwargs):$/;"	f	line:95
+write_path	SegmentationScheduledRetinanet.py	/^write_path = os.path.join('..','ScheduleDetection','predict','pascal_03')$/;"	v	line:59
 write_path	detectScheduledRetinanet.py	/^write_path = os.path.join('..','ScheduleDetection','predict','pascal_01_nonms')$/;"	v	line:54
 x	keras_retinanet/utils/compute_overlap.c	/^typedef struct { PY_LONG_LONG x; char c; } __Pyx_pad_longlong;$/;"	m	line:5797	struct:__anon28	file:
 x	keras_retinanet/utils/compute_overlap.c	/^typedef struct { char c; PY_LONG_LONG x; } __Pyx_st_longlong;$/;"	m	line:5765	struct:__anon20	file:
